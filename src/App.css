@@ -1,0 +1,180 @@
+/* App-wide styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+/* Main container */
+div {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+@media (max-width: 768px) {
+    div {
+      max-width: 90%; /* Adjust container width for tablets and smaller screens */
+      padding: 15px;
+    }
+}
+  
+  /* Heading */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5a67d8;
+}
+  
+/* Form input and button */
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows input and button to stack on smaller screens */
+}
+  
+form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+  
+form button {
+    background-color: #5a67d8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Adds space when button stacks below input */
+}
+  
+@media (max-width: 480px) {
+    form input {
+      margin-right: 0; /* Remove margin for smaller screens */
+      margin-bottom: 10px; /* Add space below input when stacked */
+    }
+  
+    form button {
+      width: 100%; /* Full width button for small screens */
+    }
+} 
+  
+  form button:hover {
+    background-color: #434190;
+}
+
+/* Task filter buttons */
+button {
+    background-color: #edf2f7;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button, input {
+    transition: all 0.2s ease-in-out;
+}
+  
+button:hover {
+    background-color: #cbd5e0;
+}
+  
+input:focus {
+    border-color: #5a67d8;
+    outline: none;
+}
+  
+  /* Task list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+  
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+  
+@media (max-width: 480px) {
+    li {
+      flex-direction: column; /* Stack task details on smaller screens */
+      align-items: flex-start; /* Align items to the left */
+    }
+  
+    li button {
+      margin: 5px 0; /* Add spacing between stacked buttons */
+      width: 100%; /* Full width buttons */
+    }
+}
+  
+  /* Task name */
+li span {
+    flex: 1; /* Take up available space */
+}
+
+li input[type='text'] {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+  
+li input[type='text']:focus {
+    outline: none;
+    border-color: #5a67d8;
+}
+  
+li span {
+    cursor: pointer;
+}
+
+li span:hover {
+    text-decoration: none; 
+}
+  
+  /* Buttons */
+button {
+    background-color: #edf2f7;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #e2e8f0;
+}
+  
+@media (max-width: 480px) {
+    button {
+      width: 100%; /* Full width buttons for small screens */
+      margin-left: 0; /* Remove left margin */
+    }
+}
+  
+/* Completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: #718096;
+}
